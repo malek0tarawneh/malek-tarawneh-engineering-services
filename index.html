@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malek Tarawneh | Civil Engineering & Transportation Consulting Services</title>
+  <meta name="description" content="Premium independent civil engineering, transportation engineering, QA/QC documentation, technical reporting, and engineering data analysis platform." />
+    <link rel="icon" href="assets/logo-icon.png" />
+  <meta property="og:image" content="assets/logo-header.png" />
+<style>
+:root{
+  --bg:#f7f9fc;
+  --paper:#fff;
+  --ink:#101828;
+  --muted:#667085;
+  --line:#e4e7ec;
+  --brand:#0a3558;
+  --brand2:#0f766e;
+  --accent:#d6a037;
+  --dark:#071a2c;
+  --soft:#eef6f7;
+  --danger:#b42318;
+  --success:#027a48;
+  --shadow:0 20px 55px rgba(16,24,40,.08);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height:1.62;
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+.container{width:min(1160px, calc(100% - 32px));margin:auto}
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.93);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand-mark{
+  width:48px;height:48px;border-radius:16px;
+  display:grid;place-items:center;
+  color:white;font-weight:900;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  letter-spacing:-.04em;
+}
+.brand strong{display:block;line-height:1.1}
+.brand small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+nav{display:flex;gap:18px;align-items:center;font-weight:800;color:#344054}
+.nav-toggle{display:none;background:none;border:0;font-size:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--brand);
+  background:var(--brand);
+  color:white;
+  border-radius:999px;
+  padding:13px 18px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(10,53,88,.15);
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-outline{background:white;color:var(--brand);box-shadow:none}
+.btn-small{padding:9px 14px;font-size:14px}
+.danger{border-color:var(--danger)!important;color:var(--danger)!important;background:white!important}
+.hero{
+  padding:88px 0 66px;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(15,118,110,.18), transparent 30%),
+    radial-gradient(circle at 5% 15%, rgba(214,160,55,.14), transparent 24%),
+    linear-gradient(180deg,#fff 0%,#eef6f7 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:34px;align-items:center}
+.eyebrow{
+  text-transform:uppercase;
+  color:var(--brand2);
+  font-size:12px;
+  letter-spacing:.14em;
+  font-weight:950;
+}
+h1{
+  font-size:clamp(38px,6vw,70px);
+  line-height:1.03;
+  margin:12px 0 18px;
+  letter-spacing:-.05em;
+}
+h2{
+  font-size:clamp(30px,4vw,48px);
+  line-height:1.1;
+  margin:8px 0 14px;
+  letter-spacing:-.035em;
+}
+h3{margin:0 0 10px;line-height:1.2}
+.lead{font-size:20px;color:#475467;max-width:760px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.trust-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.trust-row span{
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:8px 12px;font-weight:800;font-size:13px;color:#344054;
+}
+.hero-card,.card,.request-form,.result-card,.request-row,.sample,.notice{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.hero-card{padding:26px}
+.mini-label{display:inline-block;border-radius:999px;background:var(--soft);color:var(--brand2);font-weight:900;font-size:12px;padding:6px 10px;margin-bottom:16px}
+.timeline{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.timeline li{display:flex;gap:12px;align-items:center;font-weight:800;color:#344054}
+.section-dark .timeline li{color:#d4e3ef}
+.timeline span{
+  width:31px;height:31px;border-radius:50%;
+  background:var(--soft);color:var(--brand2);
+  display:grid;place-items:center;font-weight:950;flex:none;
+}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.stat-grid div{background:#f9fafb;border:1px solid var(--line);border-radius:18px;padding:14px}
+.stat-grid strong{display:block;color:var(--brand);font-size:30px;line-height:1}
+.stat-grid small{display:block;color:var(--muted);line-height:1.2;margin-top:6px}
+.section{padding:76px 0}
+.section-head{max-width:790px;margin-bottom:30px}
+.section-head p,.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:24px}
+.card-icon{font-size:30px;margin-bottom:12px}
+.card p,.card li{color:#475467}
+.card ul{padding-left:18px}
+.section-dark{background:var(--dark);color:white}
+.section-dark p,.section-dark .muted{color:#bed0de}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.feature-list{display:grid;gap:13px;margin-top:24px}
+.feature-list div{
+  padding:16px;border-radius:18px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+}
+.feature-list strong{display:block}
+.feature-list span{color:#c9d7e2}
+.dashboard-preview{
+  background:#0d243a;border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;overflow:hidden;box-shadow:0 25px 75px rgba(0,0,0,.28)
+}
+.dash-top{display:flex;gap:7px;background:#102f4b;padding:14px}
+.dash-top span{width:12px;height:12px;border-radius:50%;background:#83aabd}
+.dash-body{padding:26px}
+.pipeline{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
+.pipeline div{background:#071a2c;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:16px}
+.pipeline b{display:block}
+.pipeline small{display:block;color:var(--accent);font-size:32px;font-weight:950}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.price-card{
+  background:white;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:0 13px 35px rgba(16,24,40,.05);
+  display:flex;flex-direction:column;gap:12px;
+}
+.price-card.highlight{border-color:var(--accent);box-shadow:0 18px 40px rgba(214,160,55,.18)}
+.price{font-size:28px;color:var(--brand);font-weight:950}
+.price-card ul{padding-left:18px;color:#475467}
+.section-soft{background:var(--soft)}
+.sample-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sample{padding:22px;box-shadow:0 10px 28px rgba(16,24,40,.04)}
+.sample p{color:#667085}
+.sample span{display:inline-flex;background:var(--soft);color:var(--brand2);border-radius:999px;padding:6px 10px;font-weight:900;font-size:12px}
+.request-form{padding:26px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+label{display:block;margin-bottom:14px;color:#344054;font-weight:900}
+input,select,textarea{
+  width:100%;margin-top:7px;border:1px solid #d0d5dd;border-radius:14px;
+  padding:13px 14px;background:white;color:var(--ink);
+}
+textarea{resize:vertical}
+small{color:var(--muted);font-weight:600}
+.terms-box{background:#fffaeb;border:1px solid #fedf89;border-radius:16px;padding:14px;margin-bottom:16px}
+.check-label{display:flex;gap:10px;align-items:flex-start;margin:0;font-weight:700}
+.check-label input{width:auto;margin-top:5px}
+.form-message{font-weight:900;margin-top:14px}
+.lookup{display:flex;gap:10px;background:white;border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 10px 28px rgba(16,24,40,.04)}
+.result-card{padding:20px;margin-top:16px}
+.hidden{display:none}
+.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.admin-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.request-table{display:grid;gap:12px}
+.request-row{display:grid;grid-template-columns:1.1fr .95fr .95fr auto;gap:12px;align-items:center;padding:18px;box-shadow:0 10px 28px rgba(16,24,40,.04)}
+.badge{display:inline-flex;padding:5px 10px;border-radius:999px;background:#f2f4f7;color:#344054;font-weight:900;font-size:12px}
+.badge.submitted{background:#eff8ff;color:#175cd3}
+.badge.review{background:#eef4ff;color:#3538cd}
+.badge.quotation{background:#fffaeb;color:#b54708}
+.badge.approved{background:#ecfdf3;color:#027a48}
+.badge.progress{background:#f4f3ff;color:#5925dc}
+.badge.delivered{background:#f0fdf9;color:#047857}
+.badge.closed{background:#f2f4f7;color:#344054}
+.row-actions{display:flex;gap:8px;flex-wrap:wrap}
+.row-actions button{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 10px;cursor:pointer;font-weight:800}
+.clean-list{padding-left:18px;color:#475467}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.notice{padding:24px}
+.dark-notice{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);box-shadow:none}
+.profile-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.profile-links a{background:white;color:var(--brand);padding:10px 14px;border-radius:999px;font-weight:900}
+.legal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.legal-grid article{background:white;border:1px solid var(--line);border-radius:20px;padding:20px}
+.site-footer{background:#071a2c;color:white;padding:28px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:18px;align-items:center}
+.footer-grid p{color:#c9d7e2;margin:3px 0 0}
+.footer-grid div:last-child{display:flex;gap:14px;flex-wrap:wrap;font-weight:800}
+
+.process-list{display:grid;gap:12px;margin:18px 0}
+.process-list div{background:#071a2c;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:16px}
+.process-list b{display:block;color:#fff;margin-bottom:6px}
+.process-list small{display:block;color:#bed0de;line-height:1.45}
+
+
+.logo-brand{min-width:0; flex:0 1 auto}
+.brand-logo-img{
+  height:58px;
+  width:auto;
+  max-width:420px;
+  display:block;
+  object-fit:contain;
+}
+@media(max-width:980px){
+  .brand-logo-img{height:48px; max-width:255px}
+}
+
+@media(max-width:980px){
+  nav{display:none;position:absolute;left:16px;right:16px;top:78px;background:white;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+  nav.open{display:flex}
+  .nav-toggle{display:block}
+  .hero-grid,.split,.about-grid,.admin-grid{grid-template-columns:1fr}
+  .cards,.pricing-grid,.sample-grid,.legal-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .request-row{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;align-items:flex-start}
+}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand logo-brand" href="#home" aria-label="Malek Tarawneh Engineering Services home">
+        <img class="brand-logo-img" src="assets/logo-header.png" alt="Malek Tarawneh Engineering Services logo" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+      <nav id="navMenu">
+        <a href="#services">Services</a>
+        <a href="#how">Workflow</a>
+        <a href="#packages">Packages</a>
+        <a href="#samples">Samples</a>
+        <a href="#request">Request</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Premium Independent Technical Consulting</p>
+          <h1>Civil engineering support built like a professional consulting service.</h1>
+          <p class="lead">
+            Technical support for transportation studies, infrastructure documentation, QA/QC reporting,
+            engineering data analysis, and Excel / Google Sheets / Python-supported workflows.
+          </p>
+          <div class="hero-actions">
+            <a href="#request" class="btn">Start a Service Request</a>
+            <a href="#packages" class="btn btn-outline">View Packages</a>
+          </div>
+          <div class="trust-row">
+            <span>Transportation Engineering</span>
+            <span>QA/QC Documentation</span>
+            <span>Technical Reports</span>
+            <span>Engineering Data Analysis</span>
+            <span>Python / Excel Workflows</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="mini-label">Service flow</div>
+          <ol class="timeline compact">
+            <li><span>1</span> Client submits request</li>
+            <li><span>2</span> Documents are reviewed</li>
+            <li><span>3</span> Quotation is issued</li>
+            <li><span>4</span> Work is tracked</li>
+            <li><span>5</span> Deliverables are sent</li>
+          </ol>
+          <div class="stat-grid">
+            <div><strong>6</strong><small>Service lines</small></div>
+            <div><strong>4</strong><small>Package tiers</small></div>
+            <div><strong>∞</strong><small>Reusable workflow</small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Service Map</p>
+          <h2>Clear services for corporate and individual clients.</h2>
+          <p>
+            The service is positioned around high-value technical support, not generic freelancing.
+          </p>
+        </div>
+        <div id="serviceCards" class="cards"></div>
+      </div>
+    </section>
+
+    <section id="how" class="section section-dark">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Start-to-finish workflow</p>
+          <h2>From client problem to final deliverable.</h2>
+          <p>
+            This consulting service organizes the full journey: intake, quotation, approval, progress tracking,
+            delivery, revision, and closing record.
+          </p>
+          <div class="feature-list">
+            <div><strong>Client intake</strong><span>Structured request form, urgency, files, required output.</span></div>
+            <div><strong>Quotation system</strong><span>Admin sets price, delivery date, scope, and notes.</span></div>
+            <div><strong>Status tracking</strong><span>Submitted → Review → Quotation → Approved → In progress → Delivered → Closed.</span></div>
+            <div><strong>Delivery control</strong><span>Final deliverables are recorded with revision status and closing notes.</span></div>
+          </div>
+        </div>
+
+        <div class="dashboard-preview">
+          <div class="dash-top"><span></span><span></span><span></span></div>
+          <div class="dash-body">
+            <h3>Professional service process</h3>
+            <div class="process-list">
+              <div><b>1. Request received</b><small>Client submits project details and available documents.</small></div>
+              <div><b>2. Scope reviewed</b><small>Required output, urgency, and document quality are checked.</small></div>
+              <div><b>3. Quotation issued</b><small>Clear scope, price, timeline, and next steps are sent.</small></div>
+              <div><b>4. Work delivered</b><small>Final documents, reports, tables, or analysis outputs are delivered.</small></div>
+            </div>
+            <p class="muted">
+              Every request is reviewed before acceptance to confirm scope, deliverables, timeline, and professional boundaries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Commercial offer</p>
+          <h2>Service packages that look premium and easy to buy.</h2>
+          <p>These are starting structures. Exact price should be confirmed after file review and scope definition.</p>
+        </div>
+        <div id="packageCards" class="pricing-grid"></div>
+      </div>
+    </section>
+
+    <section id="samples" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Proof without exposing private files</p>
+          <h2>Sample deliverables library.</h2>
+          <p>Create sample PDFs and screenshots later from non-confidential demo data.</p>
+        </div>
+        <div class="sample-grid">
+          <article class="sample">
+            <h3>Traffic study support pack</h3>
+            <p>Trip generation table, field count organization, regression output, and summary notes.</p>
+            <span>Transportation</span>
+          </article>
+          <article class="sample">
+            <h3>QA/QC reporting pack</h3>
+            <p>Inspection checklist, test log, NCR tracker, and quality report structure.</p>
+            <span>Quality</span>
+          </article>
+          <article class="sample">
+            <h3>Engineering dashboard</h3>
+            <p>Excel or Google Sheets dashboard with clean charts and technical commentary.</p>
+            <span>Data</span>
+          </article>
+          <article class="sample">
+            <h3>Construction documentation pack</h3>
+            <p>Progress report, schedule follow-up, closeout checklist, and record register.</p>
+            <span>Infrastructure</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Client intake</p>
+          <h2>Request a service</h2>
+          <p>Submit your request. You will receive a reference number on the confirmation page, and the request will be sent to the service owner for review.</p>
+        </div>
+
+        <form id="requestForm" class="request-form" name="service-request" method="POST" action="/thank-you.html" netlify data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="service-request" />
+          <input type="hidden" name="requestReference" id="requestReference" value="" />
+          <p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
+          <div class="form-grid">
+            <label>Client type
+              <select name="clientType" required>
+                <option value="">Select</option>
+                <option>Corporate / contractor</option>
+                <option>Consulting office</option>
+                <option>Developer / owner</option>
+                <option>Individual client</option>
+                <option>Student / researcher</option>
+              </select>
+            </label>
+
+            <label>Service needed
+              <select name="service" required id="serviceSelect"></select>
+            </label>
+
+            <label>Package level
+              <select name="packageLevel" required id="packageSelect"></select>
+            </label>
+
+            <label>Urgency
+              <select name="urgency" required>
+                <option>Standard: 5-7 business days</option>
+                <option>Priority: 2-4 business days</option>
+                <option>Urgent: 24-48 hours</option>
+                <option>Large project: custom schedule</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Project title
+            <input name="projectTitle" placeholder="Example: Hospital trip generation data analysis" required />
+          </label>
+
+          <label>Project description
+            <textarea name="description" rows="6" placeholder="Describe the problem, available files, required output, project location, deadline, and any standards or templates." required></textarea>
+          </label>
+
+          <div class="form-grid">
+            <label>Your name
+              <input name="clientName" required />
+            </label>
+            <label>Email
+              <input name="email" type="email" required />
+            </label>
+            <label>WhatsApp / phone
+              <input name="phone" />
+            </label>
+            <label>Preferred output
+              <select name="delivery">
+                <option>PDF report</option>
+                <option>Word document</option>
+                <option>Excel / Google Sheets</option>
+                <option>Charts / dashboard</option>
+                <option>Multiple deliverables</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Upload files
+            <input type="file" id="fileInput" name="attachments" multiple />
+            <small>You may attach relevant files. Avoid sending highly confidential documents before a service agreement is confirmed.</small>
+          </label>
+
+          <div class="terms-box">
+            <label class="check-label">
+              <input type="checkbox" name="scopeConfirm" required />
+              I understand this is a request for technical consulting, documentation, analysis, or support. Official engineering approvals, stamps, permits, or legally regulated services require proper licensed authority.
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Submit Request</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+
+    
+    <section id="next-steps" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">After submission</p>
+          <h2>What happens after you send a request?</h2>
+          <p>Your request is sent securely to the website owner through the website form system. You will receive a reference number on the confirmation page.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">📩</div>
+            <h3>1. Request received</h3>
+            <p>The submitted request is received with your service type, project title, contact details, description, and uploaded file information.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔎</div>
+            <h3>2. Scope review</h3>
+            <p>The scope, required output, urgency, and available documents are reviewed before quotation.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💬</div>
+            <h3>3. Quotation and follow-up</h3>
+            <p>You are contacted by email or WhatsApp with clarification questions, quotation, expected delivery time, and next steps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-dark">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About the consultant</p>
+          <h2>Malek Tarawneh</h2>
+          <p>
+            Civil engineer with experience in construction project engineering, QA/QC, graduate transportation research,
+            technical writing, field data organization, and engineering documentation.
+          </p>
+          <p>
+            Current focus: transportation engineering, infrastructure documentation, quality control reporting,
+            engineering data analysis, Excel / Google Sheets workflows, and Python-supported automation basics.
+          </p>
+          <div class="profile-links">
+            <a href="https://www.linkedin.com/in/malek-tarawneh" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://linktr.ee/malektarawneh" target="_blank" rel="noreferrer">Linktree</a>
+            <a href="https://orcid.org/0009-0007-5438-6585" target="_blank" rel="noreferrer">ORCID</a>
+          </div>
+        </div>
+
+        <div class="notice dark-notice">
+          <h3>Scope and legal wording</h3>
+          <p>
+            Use “independent technical consulting,” “engineering documentation support,” and “analysis support”
+            unless legally licensed to provide official engineering design approvals, stamps, permits, or regulated consulting services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" class="section legal">
+      <div class="container">
+        <h2>Terms, Privacy, and Scope</h2>
+        <div class="legal-grid">
+          <article>
+            <h3>Service scope</h3>
+            <p>Requests are treated as technical consulting, analysis, documentation, reporting, and workflow support unless otherwise agreed in writing.</p>
+          </article>
+          <article>
+            <h3>Confidentiality</h3>
+            <p>Client files and project information should be treated as confidential. Production version must use secure storage and access control.</p>
+          </article>
+          <article>
+            <h3>Professional responsibility</h3>
+            <p>Official approvals, stamps, permits, and regulated engineering decisions must follow applicable licensing laws and project authority requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Malek Tarawneh</strong>
+        <p>Premium Civil Engineering & Transportation Technical Consulting Services</p>
+      </div>
+      <div>
+        <a href="#request">Request</a>
+        
+        <a href="#terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+const services = [
+  {
+    icon: "🚦",
+    title: "Traffic & Transportation Studies Support",
+    desc: "Trip generation support, traffic data organization, transportation research support, field count summaries, and technical study sections.",
+    bullets: ["Trip generation tables", "Traffic count organization", "Regression summaries"]
+  },
+  {
+    icon: "📄",
+    title: "Engineering Documentation & Technical Reports",
+    desc: "Professional technical reports, methodology writing, summaries, review documents, and structured engineering documentation.",
+    bullets: ["Report structure", "Technical writing", "Review-ready documents"]
+  },
+  {
+    icon: "✅",
+    title: "QA/QC & Site Inspection Documentation",
+    desc: "Inspection checklists, quality reports, testing logs, NCR trackers, and construction quality documentation.",
+    bullets: ["Inspection checklists", "QA/QC reports", "Testing logs"]
+  },
+  {
+    icon: "📊",
+    title: "Engineering Data Analysis",
+    desc: "Excel, Google Sheets, SPSS-style summaries, regression tables, charts, dashboards, and engineering data organization.",
+    bullets: ["Excel models", "Charts", "Data cleaning"]
+  },
+  {
+    icon: "🏗️",
+    title: "Infrastructure Project Support",
+    desc: "Project coordination documents, schedule follow-up sheets, progress reporting, closeout checklists, and record registers.",
+    bullets: ["Progress reports", "Closeout packs", "Schedule follow-up"]
+  },
+  {
+    icon: "⚙️",
+    title: "Python / Automation for Engineering Workflows",
+    desc: "Simple tools for repetitive tasks, data cleaning, reporting automation, dashboards, and structured engineering workflow support.",
+    bullets: ["Python basics", "Automation", "Data visualization"]
+  }
+];
+
+const packages = [
+  {
+    name: "Quick Review",
+    price: "Quote after review",
+    desc: "For a small report, table, document, or technical issue.",
+    items: ["Scope check", "Short technical note", "Basic correction or organization"]
+  },
+  {
+    name: "Standard Technical Pack",
+    price: "Project-based",
+    desc: "For normal engineering documentation or data work.",
+    items: ["Structured deliverable", "Tables/charts", "Professional formatting"],
+    highlight: true
+  },
+  {
+    name: "Premium Analysis Pack",
+    price: "Project-based",
+    desc: "For deeper analysis, stronger reporting, and multi-file work.",
+    items: ["Data analysis", "Technical report", "Charts/dashboard", "Revision round"]
+  },
+  {
+    name: "Corporate Support",
+    price: "Custom",
+    desc: "For contractors, offices, or repeated support.",
+    items: ["Monthly support", "Multiple deliverables", "Priority review", "Workflow setup"]
+  }
+];
+
+const statusFlow = ["Submitted", "Review", "Quotation", "Approved", "In progress", "Delivered", "Closed"];
+const storageKey = "malek_platform_requests_v2";
+let adminUnlocked = false;
+
+function getRequests(){
+  return JSON.parse(localStorage.getItem(storageKey) || "[]");
+}
+function saveRequests(items){
+  localStorage.setItem(storageKey, JSON.stringify(items));
+}
+function makeRef(){
+  const d = new Date();
+  const stamp = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}`;
+  return `MT-${stamp}-${Math.random().toString(36).slice(2,7).toUpperCase()}`;
+}
+function escapeHtml(str=""){
+  return String(str)
+    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+}
+function statusClass(status){
+  if(status === "In progress") return "progress";
+  return status.toLowerCase().replaceAll(" ","");
+}
+function renderServices(){
+  const wrap = document.getElementById("serviceCards");
+  const select = document.getElementById("serviceSelect");
+  if(wrap){
+    wrap.innerHTML = services.map(s => `
+      <article class="card">
+        <div class="card-icon">${s.icon}</div>
+        <h3>${s.title}</h3>
+        <p>${s.desc}</p>
+        <ul>${s.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+      </article>
+    `).join("");
+  }
+  if(select){
+    select.innerHTML = `<option value="">Select service</option>` + services.map(s => `<option>${s.title}</option>`).join("");
+  }
+}
+function renderPackages(){
+  const wrap = document.getElementById("packageCards");
+  const select = document.getElementById("packageSelect");
+  if(wrap){
+    wrap.innerHTML = packages.map(p => `
+      <article class="price-card ${p.highlight ? "highlight" : ""}">
+        <h3>${p.name}</h3>
+        <div class="price">${p.price}</div>
+        <p>${p.desc}</p>
+        <ul>${p.items.map(i => `<li>${i}</li>`).join("")}</ul>
+        <a href="#request" class="btn btn-outline">Choose package</a>
+      </article>
+    `).join("");
+  }
+  if(select){
+    select.innerHTML = `<option value="">Select package</option>` + packages.map(p => `<option>${p.name}</option>`).join("");
+  }
+}
+function renderCounts(){
+  const wrap = document.getElementById("pipelineCounts");
+  if(!wrap) return;
+  const reqs = getRequests();
+  const important = ["Submitted","Review","Quotation","In progress"];
+  wrap.innerHTML = important.map(s => `
+    <div><b>${s}</b><small>${reqs.filter(r => r.status === s).length}</small></div>
+  `).join("");
+}
+function renderAdmin(){
+  const table = document.getElementById("requestTable");
+  renderCounts();
+  if(!table || !adminUnlocked) return;
+  const reqs = getRequests();
+  if(!reqs.length){
+    table.innerHTML = `<div class="result-card"><strong>No requests yet.</strong><p>Submit a request or add demo data.</p></div>`;
+    return;
+  }
+  table.innerHTML = reqs.map(r => `
+    <div class="request-row">
+      <div>
+        <strong>${escapeHtml(r.projectTitle)}</strong><br>
+        <small>${r.ref} • ${escapeHtml(r.clientName)} • ${escapeHtml(r.email)}</small><br>
+        <small>${escapeHtml(r.createdAtHuman)}</small>
+      </div>
+      <div>
+        <span class="badge ${statusClass(r.status)}">${r.status}</span><br>
+        <small>${escapeHtml(r.service)}</small>
+      </div>
+      <div>
+        <small><strong>Package:</strong> ${escapeHtml(r.packageLevel)}</small><br>
+        <small><strong>Quote:</strong> ${r.quote || "Not set"}</small><br>
+        <small><strong>Delivery:</strong> ${r.deliveryDate || "Not set"}</small>
+      </div>
+      <div class="row-actions">
+        <button onclick="advanceStatus('${r.ref}')">Next</button>
+        <button onclick="setQuote('${r.ref}')">Quote</button>
+        <button onclick="setDelivery('${r.ref}')">Delivery</button>
+        <button onclick="trackByRef('${r.ref}')">Track</button>
+      </div>
+    </div>
+  `).join("");
+}
+function submitRequest(e){
+  const fd = new FormData(e.target);
+  const files = [...document.getElementById("fileInput").files].map(f => ({name:f.name, size:f.size, type:f.type}));
+  const now = new Date();
+  const request = {
+    ref: makeRef(),
+    createdAt: now.toISOString(),
+    createdAtHuman: now.toLocaleString(),
+    status: "Submitted",
+    quote: "",
+    deliveryDate: "",
+    adminNotes: "",
+    clientType: fd.get("clientType"),
+    service: fd.get("service"),
+    packageLevel: fd.get("packageLevel"),
+    urgency: fd.get("urgency"),
+    projectTitle: fd.get("projectTitle"),
+    description: fd.get("description"),
+    clientName: fd.get("clientName"),
+    email: fd.get("email"),
+    phone: fd.get("phone"),
+    delivery: fd.get("delivery"),
+    files
+  };
+
+  const refInput = document.getElementById("requestReference");
+  if(refInput) refInput.value = request.ref;
+
+  const reqs = getRequests();
+  reqs.unshift(request);
+  saveRequests(reqs);
+  localStorage.setItem("lastRequestRef", request.ref);
+  localStorage.setItem("lastRequestTitle", request.projectTitle || "");
+  localStorage.setItem("lastRequestEmail", request.email || "");
+
+  const msg = document.getElementById("formMessage");
+  if(msg){
+    msg.innerHTML = `Submitting to Netlify Forms. Your tracking reference is <strong>${request.ref}</strong>.`;
+  }
+  // Important: do not preventDefault here. The browser must submit the real HTML form to Netlify.
+}
+function advanceStatus(ref){
+  const reqs = getRequests();
+  const item = reqs.find(r => r.ref === ref);
+  if(!item) return;
+  const idx = statusFlow.indexOf(item.status);
+  item.status = statusFlow[Math.min(idx + 1, statusFlow.length - 1)];
+  saveRequests(reqs);
+  renderAdmin();
+}
+function setQuote(ref){
+  const quote = prompt("Enter quotation, for example: 150 JOD / 4 business days");
+  if(!quote) return;
+  const reqs = getRequests();
+  const item = reqs.find(r => r.ref === ref);
+  if(!item) return;
+  item.quote = quote;
+  if(["Submitted","Review"].includes(item.status)) item.status = "Quotation";
+  saveRequests(reqs);
+  renderAdmin();
+}
+function setDelivery(ref){
+  const date = prompt("Enter target delivery date, for example: 2026-06-30");
+  if(!date) return;
+  const reqs = getRequests();
+  const item = reqs.find(r => r.ref === ref);
+  if(!item) return;
+  item.deliveryDate = date;
+  saveRequests(reqs);
+  renderAdmin();
+}
+function trackByRef(ref){
+  const input = document.getElementById("lookupRef");
+  if(input) input.value = ref;
+  const reqs = getRequests();
+  const r = reqs.find(x => x.ref === ref);
+  const box = document.getElementById("clientResult");
+  if(!box) return;
+  box.classList.remove("hidden");
+  if(!r){
+    box.innerHTML = `<strong>Request not found.</strong><p>Check the reference and try again.</p>`;
+    return;
+  }
+  box.innerHTML = `
+    <h3>${escapeHtml(r.projectTitle)}</h3>
+    <p><strong>Reference:</strong> ${r.ref}</p>
+    <p><strong>Status:</strong> <span class="badge ${statusClass(r.status)}">${r.status}</span></p>
+    <p><strong>Service:</strong> ${escapeHtml(r.service)}</p>
+    <p><strong>Package:</strong> ${escapeHtml(r.packageLevel)}</p>
+    <p><strong>Quotation:</strong> ${r.quote || "Pending review"}</p>
+    <p><strong>Target delivery:</strong> ${r.deliveryDate || "Pending"}</p>
+    <p><strong>Files recorded:</strong> ${r.files.length ? r.files.map(f => escapeHtml(f.name)).join(", ") : "No files"}</p>
+    <ol class="timeline">${statusFlow.map((s,i) => `<li><span>${i+1}</span>${s}${statusFlow.indexOf(r.status) >= i ? " ✓" : ""}</li>`).join("")}</ol>
+  `;
+  location.hash = "portal";
+}
+function seedDemo(){
+  const reqs = getRequests();
+  reqs.unshift({
+    ref: makeRef(),
+    createdAt: new Date().toISOString(),
+    createdAtHuman: new Date().toLocaleString(),
+    status: "Review",
+    quote: "",
+    deliveryDate: "",
+    adminNotes: "",
+    clientType: "Corporate / contractor",
+    service: "Traffic & Transportation Studies Support",
+    packageLevel: "Standard Technical Pack",
+    urgency: "Standard: 5-7 business days",
+    projectTitle: "Traffic count organization and trip generation summary",
+    description: "Organize traffic counts, produce tables, charts, and a short technical report section.",
+    clientName: "Demo Client",
+    email: "client@example.com",
+    phone: "",
+    delivery: "Excel / Google Sheets",
+    files: [{name:"traffic-counts-demo.xlsx", size:12000, type:"application/vnd.ms-excel"}]
+  });
+  saveRequests(reqs);
+  renderAdmin();
+}
+function clearRequests(){
+  if(confirm("Clear all local prototype requests?")){
+    localStorage.removeItem(storageKey);
+    renderAdmin();
+    const box = document.getElementById("clientResult");
+    if(box) box.classList.add("hidden");
+  }
+}
+function exportJson(){
+  const data = JSON.stringify(getRequests(), null, 2);
+  const blob = new Blob([data], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "malek-platform-requests.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+function unlockAdmin(){
+  const pass = document.getElementById("adminPassword").value;
+  const msg = document.getElementById("adminLoginMsg");
+  if(pass === "admin123"){
+    adminUnlocked = true;
+    document.getElementById("adminPanel").classList.remove("hidden");
+    msg.textContent = "Dashboard unlocked.";
+    renderAdmin();
+  } else {
+    msg.textContent = "Wrong prototype password.";
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  renderServices();
+  renderPackages();
+  renderCounts();
+  document.getElementById("requestForm")?.addEventListener("submit", submitRequest);
+  document.getElementById("lookupBtn")?.addEventListener("click", () => {
+    trackByRef(document.getElementById("lookupRef").value.trim());
+  });
+  document.getElementById("adminLogin")?.addEventListener("click", unlockAdmin);
+  document.getElementById("seedDemo")?.addEventListener("click", seedDemo);
+  document.getElementById("clearRequests")?.addEventListener("click", clearRequests);
+  document.getElementById("exportJson")?.addEventListener("click", exportJson);
+  document.getElementById("navToggle")?.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.toggle("open");
+  });
+});
+
+</script>
+
+<!-- Owner note:
+Client requests are now handled through Netlify Forms:
+Netlify project → Forms → service-request.
+Email notifications are configured in Netlify Form submission notifications.
+-->
+</body>
+</html>
