@@ -4,9 +4,10 @@ A clean public website prototype for civil and transportation engineering servic
 
 ## Live Project Links
 
-- Live Website: https://malek-tarawneh-engineering.netlify.app/
-- GitHub Repository: https://github.com/malek0tarawneh/malek-tarawneh-engineering-services
-- LinkedIn Announcement: https://www.linkedin.com/posts/malek-tarawneh_civilengineering-transportationengineering-activity-7474836860951859201-kove
+* Live Website: https://malek-tarawneh-engineering.netlify.app/
+* GitHub Repository: https://github.com/malek0tarawneh/malek-tarawneh-engineering-services
+* LinkedIn Announcement: https://www.linkedin.com/posts/malek-tarawneh_civilengineering-transportationengineering-activity-7474836860951859201-kove
+* YouTube Demo: https://youtu.be/FPXaY79F0Ts
 
 ## Project Overview
 
