@@ -2,6 +2,12 @@
 
 A clean public website prototype for civil and transportation engineering services, built to organize professional service presentation, client request intake, and engineering workflow communication.
 
+## Live Project Links
+
+- Live Website: https://malek-tarawneh-engineering.netlify.app/
+- GitHub Repository: https://github.com/malek0tarawneh/malek-tarawneh-engineering-services
+- LinkedIn Announcement: https://www.linkedin.com/posts/malek-tarawneh_civilengineering-transportationengineering-activity-7474836860951859201-kove
+
 ## Project Overview
 
 This project presents a professional digital hub for civil and transportation engineering support. The website is designed to help visitors understand the available services, review the service workflow, and submit a structured engineering request.
