@@ -1,0 +1,9 @@
+date,time,location,direction,count
+2026-06-23,08:00,Main Street,Northbound,120
+2026-06-23,08:15,Main Street,Northbound,135
+2026-06-23,08:30,Main Street,Southbound,98
+2026-06-23,08:45,Main Street,Southbound,110
+2026-06-23,09:00,University Road,Eastbound,150
+2026-06-23,09:15,University Road,Eastbound,160
+2026-06-23,09:30,University Road,Westbound,140
+2026-06-23,09:45,University Road,Westbound,155
