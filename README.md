@@ -15,6 +15,31 @@ This project presents a professional digital hub for civil and transportation en
 
 The project focuses on practical engineering support areas such as traffic and transportation studies, trip-generation analysis, QA/QC documentation, infrastructure reporting, technical deliverables, and data-driven engineering workflows.
 
+## Traffic Count Cleaner
+
+This repository includes a small Python utility for cleaning simple traffic count data and preparing it for basic engineering analysis.
+
+The script reads a CSV file, removes incomplete rows, converts traffic counts into numeric values, summarizes total counts by location and direction, and exports a clean summary file.
+
+This is a practical learning project focused on Python, data cleaning, transportation analysis, and clear technical documentation.
+
+### Current features
+
+* Read simple traffic count CSV files
+* Clean missing or incomplete rows
+* Summarize counts by location and direction
+* Export a clean summary CSV file
+
+### Example use
+
+```bash
+python scripts/traffic_count_cleaner.py
+```
+
+### Project purpose
+
+The goal is to build small, useful engineering tools step by step. This project is intentionally simple and will grow gradually with better examples, documentation, and analysis features.
+
 ## Main Features
 
 - Professional homepage for engineering services
